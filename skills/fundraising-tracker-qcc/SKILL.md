@@ -1,5 +1,5 @@
 ---
-name: fundraising-tracker-qcc
+name: 融资历史追踪-fundraising-tracker-qcc
 description: >
   融资动态追踪Skill - 企查查MCP增强版。
   追踪企业融资历史、估值变化、投资方背景，辅助VC/FA进行投资决策。
@@ -78,7 +78,7 @@ export QCC_MCP_API_KEY="your_api_key_here"
 
 **企查查MCP调用**:
 - 工商变更记录 (qcc_company/get_change_records) - 股权变更
-- 融资信息 (qcc_company/get_financing_info)
+- 融资信息 (qcc_operation/get_financing_records)
 
 **融资历程**:
 ```
