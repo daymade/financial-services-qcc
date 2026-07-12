@@ -33,6 +33,10 @@ metadata:
 2. ✅ `QCC_MCP_API_KEY` 环境变量已设置
 3. ✅ Claude Code 已重启加载MCP配置
 
+### MCP 未接入时的兜底（禁止让核验断头）
+
+若当前会话没有 qcc-company / qcc-risk MCP 工具（工具列表搜不到 `mcp__qcc`），**不要停在"MCP 未配置"、更不要静默放弃**——本机 `qcc` CLI 暴露同一套工具（`qcc company get_company_registration_info / get_shareholder_info / get_key_personnel …`、`qcc risk …`，工具名与 MCP 一致），用 Bash 直接调用完成核验，并把结果落盘到调用方指定的档案位置。（2026-07-12 教训：一次 KYB 因 MCP 未接入断头、结果未落盘，事后才用 CLI 补跑。）
+
 ### 配置方法：
 ```bash
 # 1. 创建 MCP 配置文件
